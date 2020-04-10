@@ -1,0 +1,14 @@
+{
+  "welcomeFile": "/first_baseUI5app/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/first_baseUI5app/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    }
+  ]
+}

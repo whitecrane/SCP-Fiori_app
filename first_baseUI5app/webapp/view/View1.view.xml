@@ -1,9 +1,71 @@
-<mvc:View controllerName="Demo_app.first_baseUI5app.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Demo_app.first_baseUI5app.controller.View1" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content></content>
+					<content>
+						<Text xmlns="sap.m" text="Prima pagina di esempio" id="text1"/>
+						<Table noDataText="Drop column list items here and columns in the area above" items="{/ZKFIC_QUADR_CESSSet}" id="table0" popinLayout="GridLarge">
+				<headerToolbar>
+					<OverflowToolbar>
+						<Title text="Titolo tabella" level="H2"/>
+						<ToolbarSpacer/>
+						<Button
+							tooltip="View Sort Settings"
+							icon="sap-icon://sort"
+							press="handleSortButtonPressed" />
+						<Button
+							tooltip="View Filter Settings"
+							icon="sap-icon://filter"
+							press="handleFilterButtonPressed" />
+<!--						<Button
+							tooltip="View Group Settings"
+							icon="sap-icon://group-2"
+ 						press="handleGroupButtonPressed" />
+						<ToggleButton icon="sap-icon://menu" tooltip="Enable / Disable Custom Context Menu" press="onToggleContextMenu" />
+--> 						
+					</OverflowToolbar>
+				</headerToolbar>
+							<items>
+								<ColumnListItem type="Active" id="item0">
+									<cells>
+										<ObjectIdentifier id="text0" title="{Trader} - {Name1}" text="{IdCessione}"/>
+										<Text text="{Portaf}" id="text1_1587201566298"/>
+										<Text text="{ImpInca}" id="text2"/>
+										<DatePicker value="{DataRegInca}" width="100%" id="picker0"/>
+										<ObjectNumber id="input0" number="{ImpPa}" unit="Eur"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<columns>
+								<Column id="column0">
+									<header>
+										<Label text="Trader" id="label0"/>
+									</header>
+								</Column>
+								<Column id="column1">
+									<header>
+										<Label text="Portafoglio" id="label1"/>
+									</header>
+								</Column>
+								<Column id="column2">
+									<header>
+										<Label text="Imp. Incassato" id="label2"/>
+									</header>
+								</Column>
+								<Column id="column0_1587202565051" demandPopin="true" popinDisplay="Inline" minScreenWidth="Desktop">
+								    <header>
+								        <Label text="Data Incasso" id="label0_1587202565438"/>
+								    </header>
+								</Column>
+								<Column id="column1_1587202633885">
+								    <header>
+								        <Label text="{/#ZKFIC_QUADR_CESS/ImpPa/@sap:label}" id="label1_1587202634390"/>
+								    </header>
+								</Column>
+							</columns>
+						</Table>
+					</content>
 				</Page>
 			</pages>
 		</App>

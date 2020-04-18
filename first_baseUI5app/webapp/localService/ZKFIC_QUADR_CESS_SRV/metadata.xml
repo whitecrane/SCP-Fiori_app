@@ -1,0 +1,63 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZKFIC_QUADR_CESS_SRV" xml:lang="it" sap:schema-version="1">
+			<EntityType Name="ZKFIC_QUADR_CESS" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="OfferDate"/>
+					<PropertyRef Name="IdCessione"/>
+					<PropertyRef Name="Trader"/>
+					<PropertyRef Name="DataScad"/>
+					<PropertyRef Name="DataRegInca"/>
+					<PropertyRef Name="VdaCessione"/>
+				</Key>
+				<Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mandante" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OfferDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data dell'offerta"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IdCessione" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="ID Cessione"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Trader" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cliente" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DataScad" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data scadenza"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DataRegInca" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Incasso"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="VdaCessione" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="N. documento"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Portaf" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Portafoglio LAG"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="TipoCr" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Tipo cessione rev."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Nome" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpCed" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Imp. ced."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpRimb" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Totale rimborso"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpInca" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Importo incassato"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpScrt" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Importo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpPa" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Importo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ImpVda" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Importo aperto"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="MsgErr" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Campo carattere a 100 posizioni"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DtInz" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data di inizio"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="DtFin" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data finale" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/>
+			</EntityType>
+			<EntityContainer Name="ZKFIC_QUADR_CESS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="ZKFIC_QUADR_CESSSet" EntityType="ZKFIC_QUADR_CESS_SRV.ZKFIC_QUADR_CESS" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://mes.hec.enelint.global:44300/sap/opu/odata/SAP/ZKFIC_QUADR_CESS_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://mes.hec.enelint.global:44300/sap/opu/odata/SAP/ZKFIC_QUADR_CESS_SRV/$metadata"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
